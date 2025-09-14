@@ -1,4 +1,4 @@
-# kipu-bank-module
+# KIPU Bank module 2
 
 # Objetivos do Exame
 
