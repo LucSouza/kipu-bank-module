@@ -87,7 +87,7 @@ contract KipuBank is Ownable, ReentrancyGuard, Pausable {
         if (amount > MAX_WITHDRAW_PER_TX) revert TransferFailed(msg.sender, amount, WithdrawErrorReason.EXCEEDS_MAX_PER_TX, MAX_WITHDRAW_PER_TX);
 
         uint256 bal = _balances[msg.sender];
-        if (amount > bal) revert TransferFailed(msg.sender, amount, WithdrawErrorReason.EXCEEDS_MAX_PER_TX, bal);
+        if (amount > bal) revert TransferFailed(msg.sender, amount, WithdrawErrorReason.INSUFFICIENT_BALANCE, bal);
 
 
         // --- Checks done; Effects:
